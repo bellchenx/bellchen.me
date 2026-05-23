@@ -82,7 +82,7 @@
 
   <p class="label">elsewhere</p>
   <ul class="links">
-    <li>email &mdash; <a href="mailto:bell@enlighten3d.io">bell@enlighten3d.io</a></li>
+    <li>email &mdash; <a id="em" href="https://enlightenanimation.com">say hello</a></li>
     <li>company &mdash; <a href="https://enlightenanimation.com">enlightenanimation.com</a></li>
     <!-- add your socials here, e.g. -->
     <!-- <li>x &mdash; <a href="https://x.com/yourhandle">@yourhandle</a></li> -->
@@ -91,5 +91,18 @@
 
   <footer>bellchen.me</footer>
 </main>
+<script>
+  // Assemble the contact address client-side so the literal string never
+  // appears in the served HTML — keeps it usable for humans, hidden from
+  // basic email-harvesting scrapers.
+  (function () {
+    var user = "bell", domain = "enlighten3d.io";
+    var a = document.getElementById("em");
+    if (a) {
+      a.href = "mailto:" + user + "@" + domain;
+      a.textContent = user + "@" + domain;
+    }
+  })();
+</script>
 </body>
 </html>
