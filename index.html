@@ -6,71 +6,52 @@
 <title>Bell Chen</title>
 <meta name="description" content="Bell Chen — founder building the non-text AI company in San Francisco.">
 <style>
-  :root {
-    --bg: #fbfbf9;
-    --fg: #1a1a1a;
-    --dim: #6a6a6a;
-    --link: #1a1a1a;
-    --rule: #d8d8d2;
-  }
+  :root { --bg:#fbfbf9; --fg:#1a1a1a; --dim:#6a6a6a; --rule:#e0e0da; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#0e0e0e; --fg:#e6e6e3; --dim:#8a8a86; --link:#e6e6e3; --rule:#2a2a2a; }
+    :root { --bg:#0e0e0e; --fg:#e6e6e3; --dim:#8a8a86; --rule:#262626; }
   }
-  * { box-sizing: border-box; }
   body {
     background: var(--bg);
     color: var(--fg);
-    font: 15px/1.7 ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
-    margin: 0;
-    padding: 9vh 24px 14vh;
-    -webkit-font-smoothing: antialiased;
+    font: 15px/1.75 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 12vh 24px;
   }
-  main { max-width: 64ch; margin: 0 auto; }
-  h1 { font-size: 15px; font-weight: 700; margin: 0; letter-spacing: 0.02em; }
-  .tag { color: var(--dim); margin: 2px 0 0; }
-  hr {
-    border: 0;
-    border-top: 1px solid var(--rule);
-    margin: 28px 0;
-  }
-  p { margin: 0 0 14px; }
-  .label { color: var(--dim); }
-  a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-  a:hover { text-decoration: none; }
-  ul { list-style: none; padding: 0; margin: 0; }
+  a { color: inherit; }
+  h1 { font-size: 15px; font-weight: 700; margin: 0 0 2px; }
+  p { margin: 0 0 16px; }
+  .dim { color: var(--dim); }
+  ul { list-style: none; padding: 0; margin: 0 0 16px; }
   li { margin: 0 0 4px; }
-  li::before { content: "- "; color: var(--dim); }
-  .links li::before { content: ""; }
-  footer { color: var(--dim); margin-top: 40px; font-size: 13px; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+  footer { color: var(--dim); margin-top: 32px; font-size: 13px; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Bell (Beier) Chen</h1>
-  <p class="tag">San Francisco &middot; founder, builder, visual thinker</p>
+  <h1>Bell Chen</h1>
+  <p class="dim">San Francisco &middot; founder, builder, visual thinker</p>
 
   <hr>
 
-  <p>I'm building the <strong>non-text AI company</strong>. While the rest of the
-  industry wraps text boxes around model APIs, I work on visual-in / visual-out
-  interfaces &mdash; you draw, sketch, and annotate; AI responds on the same canvas.</p>
+  <p>I'm building the non-text AI company. While the rest of the industry wraps
+  text boxes around model APIs, I work on visual-in / visual-out interfaces &mdash;
+  you draw, sketch, and annotate; AI responds on the same canvas.</p>
 
-  <p>I ship products end-to-end &mdash; product, design, and the code &mdash; mostly by
-  orchestrating AI coding agents. I've watched my build time per product collapse from
+  <p>I ship products end-to-end &mdash; product, design, and the code &mdash; mostly
+  by orchestrating AI coding agents. My build time per product has collapsed from
   years to weeks, and I think that curve is the whole story of the next decade.</p>
 
   <hr>
 
-  <p class="label">now</p>
+  <p class="dim">now</p>
   <ul>
     <li>Founder &amp; CEO, <a href="https://enlightenanimation.com">Enlighten Animation Labs</a></li>
     <li><a href="https://superpencil.app">Superpencil</a> &mdash; an agent-native visual-thinking canvas</li>
     <li><a href="https://superdirector.app">Superdirector</a> &mdash; an agentic brand-growth &amp; video-intelligence product</li>
   </ul>
 
-  <hr>
-
-  <p class="label">before</p>
+  <p class="dim">before</p>
   <ul>
     <li>First founding engineer at Backlinker AI &mdash; bootstrapped to $250K ARR</li>
     <li>Co-founded ST World &mdash; 20K users, featured on a16z's market map</li>
@@ -78,31 +59,12 @@
     <li>B.S. Mathematics, The Ohio State University</li>
   </ul>
 
-  <hr>
-
-  <p class="label">elsewhere</p>
-  <ul class="links">
-    <li>email &mdash; <a id="em" href="https://enlightenanimation.com">say hello</a></li>
+  <p class="dim">elsewhere</p>
+  <ul>
+    <li>email &mdash; bell [at] enlighten3d.io</li>
     <li>company &mdash; <a href="https://enlightenanimation.com">enlightenanimation.com</a></li>
-    <!-- add your socials here, e.g. -->
-    <!-- <li>x &mdash; <a href="https://x.com/yourhandle">@yourhandle</a></li> -->
-    <!-- <li>github &mdash; <a href="https://github.com/yourhandle">@yourhandle</a></li> -->
   </ul>
 
   <footer>bellchen.me</footer>
-</main>
-<script>
-  // Assemble the contact address client-side so the literal string never
-  // appears in the served HTML — keeps it usable for humans, hidden from
-  // basic email-harvesting scrapers.
-  (function () {
-    var user = "bell", domain = "enlighten3d.io";
-    var a = document.getElementById("em");
-    if (a) {
-      a.href = "mailto:" + user + "@" + domain;
-      a.textContent = user + "@" + domain;
-    }
-  })();
-</script>
 </body>
 </html>
